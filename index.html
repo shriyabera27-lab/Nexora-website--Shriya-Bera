@@ -1,85 +1,614 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NEXORA — Beauty by Shriya Bera</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEXORA by Shriya Bera</title>
+
+<meta name="description" content="NEXORA by Shriya Bera — modern beauty, thoughtfully created.">
+<meta name="author" content="Shriya Bera">
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#faf9f7;color:#171717;font-family:Arial,Helvetica,sans-serif}
-nav{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid #e8e5e0;background:#faf9f7;position:sticky;top:0;z-index:5}
-.logo{font-size:21px;letter-spacing:4px}.navlinks{display:flex;gap:28px;font-size:13px}.navlinks a{color:#171717;text-decoration:none}
-.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 20px;background:linear-gradient(180deg,#f7f3ee,#fff)}
-.hero p{letter-spacing:3px;font-size:11px;text-transform:uppercase;margin:0 0 20px}
-h1{font-size:clamp(52px,10vw,110px);font-weight:400;letter-spacing:10px;margin:0 0 18px}
-.tag{font-size:18px;letter-spacing:.5px;margin-bottom:34px}
-.btn{display:inline-block;padding:13px 25px;border:1px solid #171717;border-radius:30px;color:#171717;text-decoration:none;font-size:13px}
-.section{padding:80px 7%}.section h2{font-size:30px;font-weight:400;text-align:center;margin:0 0 42px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#fff;border:1px solid #e7e3de;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
-.card .placeholder{flex:1;display:grid;place-items:center;color:#aaa;font-size:12px;letter-spacing:1px}
-.card h3{font-weight:400;margin:0 0 7px}.card p{font-size:13px;color:#777;margin:0}
-.media{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.media img,.media video{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee}
-.about{text-align:center;max-width:650px;margin:auto;line-height:1.8;color:#555}
-footer{text-align:center;padding:35px;border-top:1px solid #e8e5e0;font-size:12px;color:#777;letter-spacing:1px}
-#studio{background:#171717;color:white}#studio .section h2{color:white}.upload{border:1px dashed #777;padding:35px;text-align:center}
-input{margin-top:15px}.note{font-size:12px;color:#aaa;margin-top:12px}
-@media(max-width:650px){.navlinks{gap:12px;font-size:11px}.navlinks a:nth-child(2){display:none}}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f4;
+    color: #202326;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+    background: rgba(238,242,244,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #d8dde0;
+}
+
+.logo {
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.logo span {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 11px;
+    margin-left: 7px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #202326;
+    margin-left: 28px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    opacity: 0.55;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #687177;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 12vw, 150px);
+    letter-spacing: 10px;
+    font-weight: 500;
+    line-height: 0.9;
+}
+
+.hero p {
+    margin-top: 35px;
+    font-size: 16px;
+    color: #626a70;
+    letter-spacing: 1px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 32px;
+    border: 1px solid #25282a;
+    color: #25282a;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #25282a;
+    color: white;
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #747d82;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: #f7f8f8;
+    padding: 35px;
+    text-align: center;
+    border: 1px solid #dce0e2;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 350px;
+    background: #e5eaed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #737b80;
+}
+
+/* FEATURE */
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 550px;
+    background: #dfe7ea;
+}
+
+.feature-image {
+    overflow: hidden;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px;
+}
+
+.feature-text small {
+    letter-spacing: 4px;
+    font-size: 10px;
+    color: #6e777d;
+}
+
+.feature-text h2 {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+.feature-text p {
+    line-height: 1.8;
+    color: #60696e;
+    max-width: 450px;
+}
+
+/* MEDIA */
+
+.media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.media-item {
+    background: #e1e6e8;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.media-item img,
+.media-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ABOUT */
+
+.about {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #5e666b;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #25282a;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.contact h2 {
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.contact p {
+    margin-top: 20px;
+    color: #c7ccce;
+}
+
+.contact .button {
+    border-color: white;
+    color: white;
+}
+
+.contact .button:hover {
+    background: white;
+    color: #25282a;
+}
+
+/* FOOTER */
+
+footer {
+    background: #25282a;
+    color: #9ea5a8;
+    text-align: center;
+    padding: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 18px 5%;
+    }
+
+    nav a {
+        margin-left: 12px;
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+        letter-spacing: 5px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        min-height: 400px;
+    }
+
+    .feature-text {
+        padding: 50px 30px;
+    }
+
+    .feature-text h2 {
+        font-size: 38px;
+    }
+
+    .media {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
+
 <body>
-<nav><div class="logo">NEXORA</div><div class="navlinks"><a href="#shop">SHOP</a><a href="#about">ABOUT</a><a href="#media">MEDIA</a><a href="#studio">STUDIO</a></div></nav>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">
+        NEXORA
+        <span>BY SHRIYA BERA</span>
+    </div>
+
+    <div>
+        <a href="#collection">Collection</a>
+        <a href="#world">World</a>
+        <a href="#about">About</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
 
 <section class="hero">
-<div><p>Beauty by Shriya Bera</p><h1>NEXORA</h1><div class="tag">Beauty, reimagined.</div><a class="btn" href="#shop">DISCOVER NEXORA</a></div>
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            Beauty by Shriya Bera
+        </div>
+
+        <h1>NEXORA</h1>
+
+        <p>
+            Beauty, reimagined.
+        </p>
+
+        <a href="#collection" class="button">
+            Explore NEXORA
+        </a>
+
+    </div>
+
 </section>
 
-<section class="section" id="shop">
-<h2>THE COLLECTION</h2>
-<div class="products">
-<div class="card"><div class="placeholder">PRODUCT PHOTO</div><h3>Coming Soon</h3><p>Your first NEXORA product</p></div>
-<div class="card"><div class="placeholder">PRODUCT PHOTO</div><h3>Coming Soon</h3><p>New beauty essentials</p></div>
-<div class="card"><div class="placeholder">PRODUCT PHOTO</div><h3>Coming Soon</h3><p>Made for everyday beauty</p></div>
-</div>
+
+<!-- COLLECTION -->
+
+<section class="section" id="collection">
+
+    <div class="section-title">
+        <small>THE COLLECTION</small>
+        <h2>Made for your everyday.</h2>
+    </div>
+
+
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-image">
+                <img src="Nexora.png" alt="NEXORA Beauty Product">
+            </div>
+
+            <h3>NEXORA BALM</h3>
+
+            <p>
+                Deep hydration. Soft shine.
+            </p>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">
+                <img src="nexora..png" alt="NEXORA Beauty Product">
+            </div>
+
+            <h3>NEXORA GLOSS</h3>
+
+            <p>
+                Glass-like shine. Comfortable finish.
+            </p>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">
+                <img src="nexora. 2.png" alt="NEXORA Beauty Product">
+            </div>
+
+            <h3>NEXORA COLOR</h3>
+
+            <p>
+                Effortless colour. Modern beauty.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section" id="media">
-<h2>NEXORA WORLD</h2>
-<div class="media">
-<div><img src="https://placehold.co/700x700/f1eee9/777?text=YOUR+PHOTO" alt="NEXORA"></div>
-<div><img src="https://placehold.co/700x700/e9e5df/777?text=YOUR+PHOTO" alt="NEXORA"></div>
-<div><img src="https://placehold.co/700x700/f5f2ee/777?text=YOUR+VIDEO+THUMBNAIL" alt="NEXORA"></div>
-</div>
+
+<!-- FEATURE -->
+
+<section class="feature">
+
+    <div class="feature-image">
+
+        <img src="Pasted Graphic 5.png" alt="NEXORA">
+
+    </div>
+
+
+    <div class="feature-text">
+
+        <small>NEXORA PHILOSOPHY</small>
+
+        <h2>Less noise.<br>More beauty.</h2>
+
+        <p>
+            NEXORA is built around simple, thoughtful beauty.
+            Products designed to feel effortless, elegant and
+            completely yours.
+        </p>
+
+        <a href="#world" class="button">
+            Discover NEXORA
+        </a>
+
+    </div>
+
 </section>
+
+
+<!-- NEXORA WORLD -->
+
+<section class="section" id="world">
+
+    <div class="section-title">
+
+        <small>NEXORA WORLD</small>
+
+        <h2>Beauty in motion.</h2>
+
+    </div>
+
+
+    <div class="media">
+
+        <div class="media-item">
+
+            <img
+                src="Nexora.png"
+                alt="NEXORA Campaign"
+            >
+
+        </div>
+
+
+        <div class="media-item">
+
+            <img
+                src="nexora..png"
+                alt="NEXORA Campaign"
+            >
+
+        </div>
+
+
+        <div class="media-item">
+
+            <img
+                src="nexora. 2.png"
+                alt="NEXORA Campaign"
+            >
+
+        </div>
+
+
+        <div class="media-item">
+
+            <img
+                src="Pasted Graphic 5.png"
+                alt="NEXORA Campaign"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
 
 <section class="section" id="about">
-<h2>ABOUT NEXORA</h2>
-<div class="about">NEXORA is a beauty project created by Shriya Bera, built around simple design, thoughtful products and a modern, effortless aesthetic.</div>
+
+    <div class="section-title">
+
+        <small>ABOUT NEXORA</small>
+
+        <h2>Created by Shriya Bera.</h2>
+
+    </div>
+
+
+    <div class="about">
+
+        <p>
+            NEXORA is a beauty brand created by Shriya Bera,
+            built around the idea that beauty can be simple,
+            modern and expressive. Every detail is imagined
+            with a focus on elegance, comfort and individuality.
+        </p>
+
+    </div>
+
 </section>
 
-<section class="section" id="studio">
-<h2>NEXORA STUDIO</h2>
-<div class="upload">
-<strong>POST YOUR PHOTOS & VIDEOS</strong><br>
-<input id="files" type="file" accept="image/*,video/*" multiple>
-<div class="note">This demo previews uploads in this browser. For a truly public live gallery, connect this section to cloud storage.</div>
-<div id="preview" class="media" style="margin-top:25px"></div>
-</div>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+    <h2>NEXORA</h2>
+
+    <p>
+        Beauty, reimagined.
+    </p>
+
+    <a href="mailto:nexora@example.com" class="button">
+        Contact NEXORA
+    </a>
+
 </section>
 
-<footer>NEXORA BY SHRIYA BERA · EST. 2026</footer>
 
-<script>
-const input=document.getElementById('files'), preview=document.getElementById('preview');
-input.addEventListener('change',()=>{
-  preview.innerHTML='';
-  [...input.files].forEach(file=>{
-    const url=URL.createObjectURL(file);
-    const el=file.type.startsWith('video/')?document.createElement('video'):document.createElement('img');
-    el.src=url; el.controls=file.type.startsWith('video/');
-    el.autoplay=false; el.muted=true; preview.appendChild(el);
-  });
-});
-</script>
+<!-- FOOTER -->
+
+<footer>
+
+    NEXORA BY SHRIYA BERA · EST. 2026
+
+</footer>
+
+
 </body>
 </html>
