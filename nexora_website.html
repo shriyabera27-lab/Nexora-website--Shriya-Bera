@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEXORA — Beauty by Shriya Bera</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#faf9f7;color:#171717;font-family:Arial,Helvetica,sans-serif}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid #e8e5e0;background:#faf9f7;position:sticky;top:0;z-index:5}
+.logo{font-size:21px;letter-spacing:4px}.navlinks{display:flex;gap:28px;font-size:13px}.navlinks a{color:#171717;text-decoration:none}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 20px;background:linear-gradient(180deg,#f7f3ee,#fff)}
+.hero p{letter-spacing:3px;font-size:11px;text-transform:uppercase;margin:0 0 20px}
+h1{font-size:clamp(52px,10vw,110px);font-weight:400;letter-spacing:10px;margin:0 0 18px}
+.tag{font-size:18px;letter-spacing:.5px;margin-bottom:34px}
+.btn{display:inline-block;padding:13px 25px;border:1px solid #171717;border-radius:30px;color:#171717;text-decoration:none;font-size:13px}
+.section{padding:80px 7%}.section h2{font-size:30px;font-weight:400;text-align:center;margin:0 0 42px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#fff;border:1px solid #e7e3de;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
+.card .placeholder{flex:1;display:grid;place-items:center;color:#aaa;font-size:12px;letter-spacing:1px}
+.card h3{font-weight:400;margin:0 0 7px}.card p{font-size:13px;color:#777;margin:0}
+.media{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.media img,.media video{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee}
+.about{text-align:center;max-width:650px;margin:auto;line-height:1.8;color:#555}
+footer{text-align:center;padding:35px;border-top:1px solid #e8e5e0;font-size:12px;color:#777;letter-spacing:1px}
+#studio{background:#171717;color:white}#studio .section h2{color:white}.upload{border:1px dashed #777;padding:35px;text-align:center}
+input{margin-top:15px}.note{font-size:12px;color:#aaa;margin-top:12px}
+@media(max-width:650px){.navlinks{gap:12px;font-size:11px}.navlinks a:nth-child(2){display:none}}
+</style>
+</head>
+<body>
+<nav><div class="logo">NEXORA</div><div class="navlinks"><a href="#shop">SHOP</a><a href="#about">ABOUT</a><a href="#media">MEDIA</a><a href="#studio">STUDIO</a></div></nav>
+
+<section class="hero">
+<div><p>Beauty by Shriya Bera</p><h1>NEXORA</h1><div class="tag">Beauty, reimagined.</div><a class="btn" href="#shop">DISCOVER NEXORA</a></div>
+</section>
+
+<section class="section" id="shop">
+<h2>THE COLLECTION</h2>
+<div class="products">
+<div class="card"><div class="placeholder">PRODUCT PHOTO</div><h3>Coming Soon</h3><p>Your first NEXORA product</p></div>
+<div class="card"><div class="placeholder">PRODUCT PHOTO</div><h3>Coming Soon</h3><p>New beauty essentials</p></div>
+<div class="card"><div class="placeholder">PRODUCT PHOTO</div><h3>Coming Soon</h3><p>Made for everyday beauty</p></div>
+</div>
+</section>
+
+<section class="section" id="media">
+<h2>NEXORA WORLD</h2>
+<div class="media">
+<div><img src="https://placehold.co/700x700/f1eee9/777?text=YOUR+PHOTO" alt="NEXORA"></div>
+<div><img src="https://placehold.co/700x700/e9e5df/777?text=YOUR+PHOTO" alt="NEXORA"></div>
+<div><img src="https://placehold.co/700x700/f5f2ee/777?text=YOUR+VIDEO+THUMBNAIL" alt="NEXORA"></div>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>ABOUT NEXORA</h2>
+<div class="about">NEXORA is a beauty project created by Shriya Bera, built around simple design, thoughtful products and a modern, effortless aesthetic.</div>
+</section>
+
+<section class="section" id="studio">
+<h2>NEXORA STUDIO</h2>
+<div class="upload">
+<strong>POST YOUR PHOTOS & VIDEOS</strong><br>
+<input id="files" type="file" accept="image/*,video/*" multiple>
+<div class="note">This demo previews uploads in this browser. For a truly public live gallery, connect this section to cloud storage.</div>
+<div id="preview" class="media" style="margin-top:25px"></div>
+</div>
+</section>
+
+<footer>NEXORA BY SHRIYA BERA · EST. 2026</footer>
+
+<script>
+const input=document.getElementById('files'), preview=document.getElementById('preview');
+input.addEventListener('change',()=>{
+  preview.innerHTML='';
+  [...input.files].forEach(file=>{
+    const url=URL.createObjectURL(file);
+    const el=file.type.startsWith('video/')?document.createElement('video'):document.createElement('img');
+    el.src=url; el.controls=file.type.startsWith('video/');
+    el.autoplay=false; el.muted=true; preview.appendChild(el);
+  });
+});
+</script>
+</body>
+</html>
