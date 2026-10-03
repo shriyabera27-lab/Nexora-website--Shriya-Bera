@@ -57,7 +57,7 @@ nav {
 nav a {
     text-decoration: none;
     color: #202326;
-    margin-left: 28px;
+    margin-left: 24px;
     font-size: 12px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -147,7 +147,116 @@ nav a:hover {
     letter-spacing: 2px;
 }
 
-/* PRODUCTS */
+/* SHOP */
+
+.shop-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: -20px auto 45px;
+    color: #697277;
+    line-height: 1.7;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.shop-card {
+    background: #f7f8f8;
+    border: 1px solid #dce0e2;
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(32,35,38,0.08);
+}
+
+.shop-image {
+    height: 260px;
+    background: #e5eaed;
+    overflow: hidden;
+}
+
+.shop-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-card h3 {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.price {
+    margin-top: 9px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.order-button {
+    display: inline-block;
+    margin-top: 17px;
+    padding: 11px 20px;
+    border: 1px solid #25282a;
+    color: #25282a;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.order-button:hover {
+    background: #25282a;
+    color: white;
+}
+
+/* PAYMENT */
+
+.payment {
+    margin-top: 45px;
+    text-align: center;
+    padding: 35px 20px;
+    background: #dfe7ea;
+}
+
+.payment h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.payment p {
+    margin-top: 12px;
+    color: #626a70;
+    line-height: 1.7;
+}
+
+.payment-options {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.payment-pill {
+    padding: 10px 18px;
+    border: 1px solid #aeb7bc;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* COLLECTION */
 
 .products {
     display: grid;
@@ -319,6 +428,12 @@ footer {
 
 /* MOBILE */
 
+@media (max-width: 1000px) {
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 800px) {
 
     nav {
@@ -326,7 +441,7 @@ footer {
     }
 
     nav a {
-        margin-left: 12px;
+        margin-left: 10px;
         font-size: 9px;
     }
 
@@ -335,7 +450,8 @@ footer {
         letter-spacing: 5px;
     }
 
-    .products {
+    .products,
+    .shop-grid {
         grid-template-columns: 1fr;
     }
 
@@ -367,16 +483,19 @@ footer {
 <!-- NAVIGATION -->
 
 <nav>
+
     <div class="logo">
         NEXORA
         <span>BY SHRIYA BERA</span>
     </div>
 
     <div>
+        <a href="#shop">Shop</a>
         <a href="#collection">Collection</a>
         <a href="#world">World</a>
         <a href="#about">About</a>
     </div>
+
 </nav>
 
 
@@ -396,9 +515,155 @@ footer {
             Beauty, reimagined.
         </p>
 
-        <a href="#collection" class="button">
-            Explore NEXORA
+        <a href="#shop" class="button">
+            Shop NEXORA
         </a>
+
+    </div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section class="section" id="shop">
+
+    <div class="section-title">
+
+        <small>SHOP NEXORA</small>
+
+        <h2>Your beauty essentials.</h2>
+
+    </div>
+
+    <p class="shop-intro">
+        Discover the NEXORA collection — thoughtfully imagined
+        for effortless, modern beauty.
+    </p>
+
+
+    <div class="shop-grid">
+
+        <!-- LIPSTICK -->
+
+        <div class="shop-card">
+
+            <div class="shop-image">
+                <img src="Nexora.png" alt="NEXORA Lipstick">
+            </div>
+
+            <h3>LIPSTICK</h3>
+
+            <div class="price">
+                $40
+            </div>
+
+            <a
+                class="order-button"
+                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Lipstick%20Order"
+            >
+                Order Now
+            </a>
+
+        </div>
+
+
+        <!-- CREAM -->
+
+        <div class="shop-card">
+
+            <div class="shop-image">
+                <img src="nexora..png" alt="NEXORA Cream">
+            </div>
+
+            <h3>CREAM</h3>
+
+            <div class="price">
+                $50
+            </div>
+
+            <a
+                class="order-button"
+                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Cream%20Order"
+            >
+                Order Now
+            </a>
+
+        </div>
+
+
+        <!-- LIP OIL -->
+
+        <div class="shop-card">
+
+            <div class="shop-image">
+                <img src="nexora. 2.png" alt="NEXORA Lip Oil">
+            </div>
+
+            <h3>LIP OIL</h3>
+
+            <div class="price">
+                $25
+            </div>
+
+            <a
+                class="order-button"
+                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Lip%20Oil%20Order"
+            >
+                Order Now
+            </a>
+
+        </div>
+
+
+        <!-- HIGHLIGHTING STICK -->
+
+        <div class="shop-card">
+
+            <div class="shop-image">
+                <img src="Pasted Graphic 5.png" alt="NEXORA Highlighting Stick">
+            </div>
+
+            <h3>HIGHLIGHTING STICK</h3>
+
+            <div class="price">
+                $30
+            </div>
+
+            <a
+                class="order-button"
+                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Highlighting%20Stick%20Order"
+            >
+                Order Now
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PAYMENT -->
+
+    <div class="payment">
+
+        <h3>ORDERING & PAYMENT</h3>
+
+        <p>
+            Orders can be placed through NEXORA.
+            Google Pay and Cash on Delivery are available.
+        </p>
+
+        <div class="payment-options">
+
+            <div class="payment-pill">
+                Google Pay
+            </div>
+
+            <div class="payment-pill">
+                Cash on Delivery
+            </div>
+
+        </div>
 
     </div>
 
@@ -410,8 +675,11 @@ footer {
 <section class="section" id="collection">
 
     <div class="section-title">
+
         <small>THE COLLECTION</small>
+
         <h2>Made for your everyday.</h2>
+
     </div>
 
 
@@ -472,16 +740,24 @@ footer {
 
     <div class="feature-image">
 
-        <img src="Pasted Graphic 5.png" alt="NEXORA">
+        <img
+            src="Pasted Graphic 5.png"
+            alt="NEXORA"
+        >
 
     </div>
 
 
     <div class="feature-text">
 
-        <small>NEXORA PHILOSOPHY</small>
+        <small>
+            NEXORA PHILOSOPHY
+        </small>
 
-        <h2>Less noise.<br>More beauty.</h2>
+        <h2>
+            Less noise.<br>
+            More beauty.
+        </h2>
 
         <p>
             NEXORA is built around simple, thoughtful beauty.
@@ -504,9 +780,13 @@ footer {
 
     <div class="section-title">
 
-        <small>NEXORA WORLD</small>
+        <small>
+            NEXORA WORLD
+        </small>
 
-        <h2>Beauty in motion.</h2>
+        <h2>
+            Beauty in motion.
+        </h2>
 
     </div>
 
@@ -563,9 +843,13 @@ footer {
 
     <div class="section-title">
 
-        <small>ABOUT NEXORA</small>
+        <small>
+            ABOUT NEXORA
+        </small>
 
-        <h2>Created by Shriya Bera.</h2>
+        <h2>
+            Created by Shriya Bera.
+        </h2>
 
     </div>
 
@@ -588,15 +872,24 @@ footer {
 
 <section class="contact">
 
-    <h2>NEXORA</h2>
+    <h2>
+        NEXORA
+    </h2>
 
     <p>
         Beauty, reimagined.
     </p>
 
-    <a href="mailto:nexora@example.com" class="button">
+    <a
+        href="mailto:shriyabera27@gmail.com"
+        class="button"
+    >
         Contact NEXORA
     </a>
+
+    <p>
+        shriyabera27@gmail.com
+    </p>
 
 </section>
 
