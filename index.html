@@ -13,54 +13,64 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #eef3f6;
     color: #202326;
 }
 
-/* NAVIGATION */
+/* ================= NAVIGATION ================= */
+
 nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(238,243,246,0.94);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid #d9dfe2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 6%;
+    background: rgba(238,243,246,0.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #d9dfe2;
 }
 
 .logo {
     font-size: 25px;
+    font-weight: 400;
     letter-spacing: 5px;
-    font-weight: 500;
 }
 
 .logo span {
     display: block;
-    font-size: 9px;
-    letter-spacing: 3px;
-    margin-top: 4px;
     text-align: center;
+    margin-top: 4px;
+    font-size: 8px;
+    letter-spacing: 3px;
 }
 
-nav a {
-    color: #222;
-    text-decoration: none;
+.nav-links a {
     margin-left: 28px;
-    font-size: 13px;
+    color: #202326;
+    text-decoration: none;
+    font-size: 12px;
     letter-spacing: 2px;
 }
 
-/* HERO */
+.nav-links a:hover {
+    opacity: .55;
+}
+
+/* ================= HERO ================= */
+
 .hero {
-    min-height: 85vh;
+    min-height: 88vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 80px 20px;
 }
@@ -73,31 +83,32 @@ nav a {
 
 .hero p {
     margin-top: 20px;
-    font-size: 18px;
-    letter-spacing: 4px;
     color: #687177;
+    font-size: 17px;
+    letter-spacing: 5px;
 }
 
 .button {
     display: inline-block;
-    margin-top: 35px;
-    padding: 15px 35px;
-    border: 1px solid #222;
+    margin-top: 30px;
+    padding: 15px 34px;
+    border: 1px solid #24282b;
+    color: #24282b;
     text-decoration: none;
-    color: #222;
-    font-size: 12px;
-    letter-spacing: 3px;
     background: transparent;
+    font-size: 11px;
+    letter-spacing: 3px;
     cursor: pointer;
     transition: .3s;
 }
 
 .button:hover {
-    background: #222;
+    background: #24282b;
     color: white;
 }
 
-/* GENERAL */
+/* ================= SECTIONS ================= */
+
 section {
     padding: 90px 5%;
 }
@@ -110,13 +121,20 @@ section {
 }
 
 .section-subtitle {
+    max-width: 850px;
+    margin: 18px auto 60px;
     text-align: center;
-    margin: 18px auto 65px;
-    color: #697278;
-    font-size: 17px;
+    color: #687177;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-/* SHOP */
+/* ================= SHOP ================= */
+
+#shop {
+    background: #eef3f6;
+}
+
 .shop-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -124,109 +142,109 @@ section {
 }
 
 .product-card {
-    background: #f9fafb;
-    border: 1px solid #d7dcdf;
+    background: #fafbfc;
+    border: 1px solid #d8dde0;
     padding: 26px;
     text-align: center;
     transition: .3s;
 }
 
 .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(80,90,100,.12);
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(70,80,90,.12);
 }
 
 .product-image {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    cursor: pointer;
     display: block;
+    cursor: pointer;
+    transition: .35s;
+}
+
+.product-image:hover {
+    transform: scale(1.015);
 }
 
 .product-name {
-    margin-top: 27px;
-    font-size: 22px;
-    letter-spacing: 2px;
+    margin-top: 25px;
+    font-size: 20px;
     font-weight: 400;
+    letter-spacing: 2px;
 }
 
 .price {
-    margin-top: 13px;
-    font-size: 23px;
+    margin-top: 12px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 .product-card .button {
-    margin-top: 25px;
+    margin-top: 23px;
 }
 
 /* PAYMENT */
+
 .payment {
+    margin: 60px auto 0;
+    padding: 24px;
+    max-width: 900px;
     text-align: center;
-    margin-top: 55px;
-    padding: 25px;
-    border-top: 1px solid #d5dbde;
-    border-bottom: 1px solid #d5dbde;
-    color: #626b70;
-    letter-spacing: 1px;
+    border-top: 1px solid #d2d9dd;
+    border-bottom: 1px solid #d2d9dd;
+    color: #697278;
+    font-size: 12px;
+    letter-spacing: 2px;
 }
 
-/* COLLECTION */
+/* ================= COLLECTION ================= */
+
 .collection {
-    background: #e6edf1;
+    background: #e5edf1;
 }
 
 .collection-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 28px;
 }
 
 .collection-card {
+    padding: 40px 30px;
     background: #f8fafb;
-    padding: 35px;
     text-align: center;
 }
 
 .collection-card h3 {
-    margin-bottom: 15px;
-    letter-spacing: 3px;
     font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
 }
 
 .collection-card p {
-    color: #697278;
-    line-height: 1.7;
-}
-
-/* FEATURE */
-.feature {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.feature img {
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-}
-
-.feature-text h2 {
-    font-size: 48px;
-    font-weight: 300;
-    letter-spacing: 4px;
-}
-
-.feature-text p {
-    margin-top: 25px;
+    color: #687177;
     line-height: 1.8;
-    color: #626b70;
+    font-size: 14px;
 }
 
-/* MODELS */
+/* ================= BRAND STORY ================= */
+
+.brand-story {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.brand-story p {
+    margin-top: 25px;
+    color: #657077;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+/* ================= MODELS ================= */
+
 .models {
     background: #e8eef1;
 }
@@ -237,64 +255,79 @@ section {
     gap: 22px;
 }
 
-.model-placeholder {
-    min-height: 420px;
-    border: 1px dashed #b9c2c7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #899298;
-    letter-spacing: 3px;
-    text-align: center;
-    background: #f2f5f6;
+/*
+   YOUR MODELLING PHOTOS WILL REPLACE
+   THESE PLACEHOLDERS.
+*/
+
+.model-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
 }
 
-/* ABOUT */
+.model-placeholder {
+    aspect-ratio: 3 / 4;
+    background: #f1f4f5;
+    border: 1px dashed #bbc4c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #899298;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* ================= ABOUT ================= */
+
 .about {
-    max-width: 900px;
+    max-width: 850px;
     margin: auto;
     text-align: center;
 }
 
 .about p {
-    margin-top: 30px;
-    color: #626b70;
+    margin-top: 28px;
+    color: #657077;
     line-height: 1.9;
-    font-size: 17px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact {
     text-align: center;
-    background: #dde6eb;
+    background: #dfe8ed;
 }
 
 .contact p {
-    margin-top: 20px;
-    color: #697278;
+    margin-top: 18px;
+    color: #687177;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
-    text-align: center;
     padding: 35px;
+    text-align: center;
     background: #202326;
-    color: #dfe5e8;
+    color: #e1e6e8;
+    font-size: 10px;
     letter-spacing: 3px;
-    font-size: 11px;
 }
 
-/* MODAL */
+/* ================= PRODUCT MODAL ================= */
+
 .modal {
-    display: none;
     position: fixed;
-    z-index: 2000;
     inset: 0;
-    background: rgba(20,25,28,.65);
-    backdrop-filter: blur(10px);
-    align-items: center;
+    z-index: 3000;
+    display: none;
     justify-content: center;
+    align-items: center;
     padding: 20px;
+    background: rgba(22,27,30,.68);
+    backdrop-filter: blur(10px);
 }
 
 .modal.active {
@@ -302,33 +335,42 @@ footer {
 }
 
 .modal-box {
-    width: min(560px, 95%);
-    background: #f8fafb;
-    padding: 40px;
     position: relative;
+    width: min(600px, 95%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 45px;
+    background: #f8fafb;
     text-align: center;
-    box-shadow: 0 30px 80px rgba(0,0,0,.25);
+    box-shadow: 0 30px 90px rgba(0,0,0,.28);
 }
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
+    top: 14px;
+    right: 22px;
+    font-size: 29px;
+    font-weight: 200;
     cursor: pointer;
-    font-weight: 300;
 }
 
 .modal-title {
-    font-size: 30px;
-    letter-spacing: 3px;
+    font-size: 28px;
     font-weight: 400;
+    letter-spacing: 3px;
 }
 
 .modal-price {
-    margin: 12px 0 30px;
+    margin-top: 12px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.modal-instruction {
+    margin: 25px 0 18px;
+    color: #747d82;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 .shades {
@@ -338,16 +380,16 @@ footer {
 }
 
 .shade {
-    border: 1px solid #c8d0d4;
+    padding: 17px 12px;
     background: white;
-    padding: 16px 10px;
+    border: 1px solid #ccd3d7;
     cursor: pointer;
     transition: .25s;
 }
 
 .shade:hover,
 .shade.selected {
-    background: #25282a;
+    background: #25292c;
     color: white;
 }
 
@@ -357,154 +399,145 @@ footer {
 }
 
 .shade-description {
-    font-size: 11px;
     margin-top: 5px;
-    opacity: .7;
+    font-size: 10px;
+    opacity: .65;
 }
 
 .selected-shade {
-    margin-top: 25px;
-    color: #626b70;
     min-height: 20px;
+    margin-top: 22px;
+    color: #626c71;
+    font-size: 13px;
 }
 
-/* MOBILE */
-@media(max-width: 900px) {
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
     .shop-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .collection-grid,
-    .models-grid,
-    .feature {
+    .models-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin: 0 7px;
+        font-size: 9px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .models-grid {
         grid-template-columns: 1fr;
     }
 }
 
-@media(max-width: 600px) {
-    nav {
-        padding: 16px 20px;
-    }
+@media (max-width: 550px) {
 
-    nav a {
-        margin-left: 10px;
-        font-size: 10px;
+    section {
+        padding: 65px 20px;
     }
 
     .shop-grid {
         grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 65px 20px;
     }
 
     .hero h1 {
         letter-spacing: 8px;
     }
 
+    .hero p {
+        font-size: 13px;
+    }
+
     .shades {
         grid-template-columns: 1fr;
+    }
+
+    .modal-box {
+        padding: 40px 22px;
     }
 }
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+<!-- ================= NAVIGATION ================= -->
+
 <nav>
+
     <div class="logo">
         NEXORA
         <span>BY SHRIYA BERA</span>
     </div>
 
-    <div>
+    <div class="nav-links">
         <a href="#shop">SHOP</a>
         <a href="#collection">COLLECTION</a>
         <a href="#models">WORLD</a>
         <a href="#about">ABOUT</a>
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
+
 <section class="hero">
+
     <div>
+
         <h1>NEXORA</h1>
+
         <p>BEAUTY, REIMAGINED.</p>
 
         <a href="#shop" class="button">
             SHOP NEXORA
         </a>
+
     </div>
+
 </section>
 
 
-<!-- SHOP -->
+<!-- ================= SHOP ================= -->
+
 <section id="shop">
 
-    <h2 class="section-title">SHOP NEXORA</h2>
+    <h2 class="section-title">
+        SHOP NEXORA
+    </h2>
 
     <p class="section-subtitle">
-        Discover the NEXORA collection — thoughtfully imagined for effortless, modern beauty.
+        Discover the NEXORA collection — thoughtfully imagined
+        for effortless, modern beauty.
     </p>
+
 
     <div class="shop-grid">
 
-        <!-- LIP OIL -->
-        <div class="product-card">
 
-            <img
-                src="nexora..png"
-                alt="NEXORA Luxe Shine Lip Oil"
-                class="product-image"
-                onclick="openProduct('lipOil')"
-            >
+        <!-- =================================================
+             1. SOFT MATTE LIPSTICK
+             IMAGE: Nexora.png
+             PRICE: $40
+        ================================================== -->
 
-            <h3 class="product-name">
-                LUXE SHINE LIP OIL
-            </h3>
-
-            <div class="price">$25</div>
-
-            <a
-                class="button"
-                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Luxe%20Shine%20Lip%20Oil%20Order"
-            >
-                ORDER NOW
-            </a>
-
-        </div>
-
-
-        <!-- CREAM -->
-        <div class="product-card">
-
-            <img
-                src="nexora. 2.png"
-                alt="NEXORA Dew Cream"
-                class="product-image"
-                onclick="openProduct('cream')"
-            >
-
-            <h3 class="product-name">
-                DEW CREAM
-            </h3>
-
-            <div class="price">$50</div>
-
-            <a
-                class="button"
-                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Dew%20Cream%20Order"
-            >
-                ORDER NOW
-            </a>
-
-        </div>
-
-
-        <!-- LIPSTICK -->
         <div class="product-card">
 
             <img
@@ -518,7 +551,9 @@ footer {
                 SOFT MATTE LIPSTICK
             </h3>
 
-            <div class="price">$40</div>
+            <div class="price">
+                $40
+            </div>
 
             <a
                 class="button"
@@ -530,7 +565,78 @@ footer {
         </div>
 
 
-        <!-- HIGHLIGHTING STICK -->
+        <!-- =================================================
+             2. DEW CREAM
+             IMAGE: nexora..png
+             PRICE: $50
+        ================================================== -->
+
+        <div class="product-card">
+
+            <img
+                src="nexora..png"
+                alt="NEXORA Dew Cream"
+                class="product-image"
+                onclick="openProduct('cream')"
+            >
+
+            <h3 class="product-name">
+                DEW CREAM
+            </h3>
+
+            <div class="price">
+                $50
+            </div>
+
+            <a
+                class="button"
+                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Dew%20Cream%20Order"
+            >
+                ORDER NOW
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             3. LUXE SHINE LIP OIL
+             IMAGE: nexora. 2.png
+             PRICE: $25
+        ================================================== -->
+
+        <div class="product-card">
+
+            <img
+                src="nexora. 2.png"
+                alt="NEXORA Luxe Shine Lip Oil"
+                class="product-image"
+                onclick="openProduct('lipOil')"
+            >
+
+            <h3 class="product-name">
+                LUXE SHINE LIP OIL
+            </h3>
+
+            <div class="price">
+                $25
+            </div>
+
+            <a
+                class="button"
+                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Luxe%20Shine%20Lip%20Oil%20Order"
+            >
+                ORDER NOW
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             4. LUMINOUS HIGHLIGHT STICK
+             IMAGE: Pasted Graphic 5.png
+             PRICE: $30
+        ================================================== -->
+
         <div class="product-card">
 
             <img
@@ -544,7 +650,9 @@ footer {
                 LUMINOUS HIGHLIGHT STICK
             </h3>
 
-            <div class="price">$30</div>
+            <div class="price">
+                $30
+            </div>
 
             <a
                 class="button"
@@ -565,39 +673,55 @@ footer {
 </section>
 
 
-<!-- COLLECTION -->
+<!-- ================= COLLECTION ================= -->
+
 <section id="collection" class="collection">
 
-    <h2 class="section-title">THE NEXORA COLLECTION</h2>
+    <h2 class="section-title">
+        THE NEXORA COLLECTION
+    </h2>
 
     <p class="section-subtitle">
-        Simple formulas. Sophisticated finishes. Made for everyday beauty.
+        Simple formulas. Sophisticated finishes.
+        Made for everyday beauty.
     </p>
+
 
     <div class="collection-grid">
 
         <div class="collection-card">
+
             <h3>HYDRATE</h3>
+
             <p>
-                Nourishing textures designed to leave lips feeling soft,
-                comfortable and cared for.
+                Nourishing textures designed to leave
+                lips feeling soft, comfortable and cared for.
             </p>
+
         </div>
 
+
         <div class="collection-card">
+
             <h3>DEFINE</h3>
+
             <p>
-                Modern colour with elegant finishes that complement
-                your everyday look.
+                Modern colour with elegant finishes
+                created for everyday expression.
             </p>
+
         </div>
+
 
         <div class="collection-card">
+
             <h3>GLOW</h3>
+
             <p>
-                Soft luminous finishes created to bring effortless
-                dimension to your look.
+                Soft luminous finishes created to bring
+                effortless dimension to your look.
             </p>
+
         </div>
 
     </div>
@@ -605,28 +729,26 @@ footer {
 </section>
 
 
-<!-- FEATURE -->
-<section class="feature">
+<!-- ================= BRAND STORY ================= -->
 
-    <img
-        src="Pasted Graphic 5.png"
-        alt="NEXORA Beauty"
-    >
+<section>
 
-    <div class="feature-text">
+    <div class="brand-story">
 
-        <h2>BEAUTY,<br>REIMAGINED.</h2>
+        <h2 class="section-title">
+            BEAUTY, REIMAGINED.
+        </h2>
 
         <p>
-            NEXORA is a modern beauty brand created by Shriya Bera,
-            built around effortless beauty, thoughtful textures and
-            clean, sophisticated design.
+            NEXORA is a modern beauty brand created by
+            Shriya Bera, built around effortless beauty,
+            thoughtful textures and clean, sophisticated design.
         </p>
 
         <p>
-            From nourishing lip care to luminous finishes,
-            every NEXORA product is imagined to feel personal,
-            comfortable and beautifully simple.
+            From soft matte colour to luminous finishes,
+            NEXORA is designed around beauty that feels
+            personal, comfortable and effortless.
         </p>
 
     </div>
@@ -634,18 +756,32 @@ footer {
 </section>
 
 
-<!-- MODELS -->
+<!-- ================= MODELLING SECTION ================= -->
+
 <section id="models" class="models">
 
-    <h2 class="section-title">NEXORA WORLD</h2>
+    <h2 class="section-title">
+        NEXORA WORLD
+    </h2>
 
     <p class="section-subtitle">
         Beauty in every expression.
     </p>
 
+
     <div class="models-grid">
 
-        <!-- YOUR MODELLING PHOTOS WILL GO HERE -->
+        <!--
+        THESE ARE TEMPORARY PLACEHOLDERS.
+
+        When you upload your modelling photos,
+        replace each placeholder with:
+
+        <img src="YOUR-FILENAME.jpg"
+             class="model-photo"
+             alt="NEXORA model">
+        -->
+
 
         <div class="model-placeholder">
             MODELLING PHOTO 01
@@ -676,22 +812,27 @@ footer {
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
+
 <section id="about">
 
     <div class="about">
 
-        <h2 class="section-title">ABOUT NEXORA</h2>
+        <h2 class="section-title">
+            ABOUT NEXORA
+        </h2>
 
         <p>
-            NEXORA is a modern beauty brand created by Shriya Bera.
-            The brand brings together elegant design, comfortable
-            textures and effortless beauty for a new generation.
+            NEXORA is a modern beauty brand created by
+            Shriya Bera. The brand brings together
+            elegant design, comfortable textures and
+            effortless beauty for a new generation.
         </p>
 
         <p>
-            NEXORA believes beauty does not need to be complicated.
-            It should feel natural, personal and entirely your own.
+            NEXORA believes beauty does not need to be
+            complicated. It should feel natural,
+            personal and entirely your own.
         </p>
 
     </div>
@@ -699,10 +840,13 @@ footer {
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
+
 <section class="contact">
 
-    <h2 class="section-title">CONNECT WITH NEXORA</h2>
+    <h2 class="section-title">
+        CONNECT WITH NEXORA
+    </h2>
 
     <p>
         For enquiries and orders
@@ -722,29 +866,60 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
 <footer>
     NEXORA BY SHRIYA BERA · EST. 2026
 </footer>
 
 
 
-<!-- PRODUCT MODAL -->
+<!-- =====================================================
+     PRODUCT SHADE POP-UP
+====================================================== -->
+
 <div id="productModal" class="modal">
 
     <div class="modal-box">
 
-        <span class="close" onclick="closeProduct()">×</span>
+        <span
+            class="close"
+            onclick="closeProduct()"
+        >
+            ×
+        </span>
 
-        <h2 id="modalTitle" class="modal-title"></h2>
 
-        <div id="modalPrice" class="modal-price"></div>
+        <h2
+            id="modalTitle"
+            class="modal-title"
+        ></h2>
 
-        <div id="shadeContainer" class="shades"></div>
 
-        <div id="selectedShade" class="selected-shade">
+        <div
+            id="modalPrice"
+            class="modal-price"
+        ></div>
+
+
+        <div class="modal-instruction">
+            SELECT YOUR SHADE
+        </div>
+
+
+        <div
+            id="shadeContainer"
+            class="shades"
+        ></div>
+
+
+        <div
+            id="selectedShade"
+            class="selected-shade"
+        >
             Select a shade
         </div>
+
 
         <a
             id="modalOrder"
@@ -762,113 +937,196 @@ footer {
 
 <script>
 
+/* =====================================================
+   PRODUCT DATA
+===================================================== */
+
 const products = {
 
-    lipOil: {
-        title: "LUXE SHINE LIP OIL",
-        price: "$25",
+    lipstick: {
+
+        title: "SOFT MATTE LIPSTICK",
+
+        price: "$40",
+
         shades: [
-            ["Unbutton", "Skin colour"],
-            ["Rosewood", "Light burgundy"],
-            ["Glass Slipper", "Transparent"],
-            ["Loveletter", "Pink"]
+
+            ["Rambling Rose", "Dark pink"],
+
+            ["Naughty Nude", "Light bronze"],
+
+            ["Darling Dahlia", "Pink"],
+
+            ["Magical Mauve", "Mauve"]
+
         ]
+
     },
+
 
     cream: {
+
         title: "DEW CREAM",
+
         price: "$50",
+
         shades: [
+
             ["White", "White"]
+
         ]
+
     },
 
-    lipstick: {
-        title: "SOFT MATTE LIPSTICK",
-        price: "$40",
+
+    lipOil: {
+
+        title: "LUXE SHINE LIP OIL",
+
+        price: "$25",
+
         shades: [
-            ["Rambling Rose", "Dark pink"],
-            ["Naughty Nude", "Light bronze"],
-            ["Darling Dahlia", "Pink"],
-            ["Magical Mauve", "Mauve"]
+
+            ["Unbutton", "Skin colour"],
+
+            ["Rosewood", "Light burgundy"],
+
+            ["Glass Slipper", "Transparent"],
+
+            ["Loveletter", "Pink"]
+
         ]
+
     },
+
 
     highlight: {
+
         title: "LUMINOUS HIGHLIGHT STICK",
+
         price: "$30",
+
         shades: [
+
             ["Bronze Lights", "Bronze"],
+
             ["Beige Lights", "Beige"],
+
             ["Pink Lights", "Pink"],
+
             ["Lavender Lights", "Lavender"]
+
         ]
+
     }
 
 };
 
 
+/* =====================================================
+   OPEN PRODUCT
+===================================================== */
+
 function openProduct(productKey) {
 
     const product = products[productKey];
 
-    document.getElementById("productModal").classList.add("active");
+    const modal =
+        document.getElementById("productModal");
+
+    modal.classList.add("active");
+
 
     document.getElementById("modalTitle").textContent =
         product.title;
 
+
     document.getElementById("modalPrice").textContent =
         product.price;
+
+
+    document.getElementById("selectedShade").textContent =
+        "Select a shade";
+
 
     const container =
         document.getElementById("shadeContainer");
 
     container.innerHTML = "";
 
-    document.getElementById("selectedShade").textContent =
-        "Select a shade";
 
-    product.shades.forEach((shade, index) => {
+    document.getElementById("modalOrder").href = "#";
 
-        const button = document.createElement("div");
 
-        button.className = "shade";
+    product.shades.forEach(function(shade) {
 
-        button.innerHTML = `
-            <div class="shade-name">${shade[0]}</div>
-            <div class="shade-description">${shade[1]}</div>
+        const shadeButton =
+            document.createElement("div");
+
+        shadeButton.className = "shade";
+
+
+        shadeButton.innerHTML = `
+
+            <div class="shade-name">
+                ${shade[0]}
+            </div>
+
+            <div class="shade-description">
+                ${shade[1]}
+            </div>
+
         `;
 
-        button.onclick = function() {
+
+        shadeButton.onclick = function() {
 
             document
                 .querySelectorAll(".shade")
-                .forEach(item => item.classList.remove("selected"));
+                .forEach(function(item) {
 
-            button.classList.add("selected");
+                    item.classList.remove("selected");
 
-            document.getElementById("selectedShade").textContent =
+                });
+
+
+            shadeButton.classList.add("selected");
+
+
+            document.getElementById("selectedShade")
+                .textContent =
                 "Selected: " + shade[0];
 
-            const subject =
-                encodeURIComponent(
-                    "NEXORA " +
-                    product.title +
-                    " — " +
-                    shade[0] +
-                    " Order"
-                );
+
+            const subject = encodeURIComponent(
+
+                "NEXORA " +
+                product.title +
+                " — " +
+                shade[0] +
+                " Order"
+
+            );
+
 
             document.getElementById("modalOrder").href =
-                "mailto:shriyabera27@gmail.com?subject=" + subject;
+
+                "mailto:shriyabera27@gmail.com?subject="
+                + subject;
+
         };
 
-        container.appendChild(button);
+
+        container.appendChild(shadeButton);
 
     });
 
 }
 
+
+/* =====================================================
+   CLOSE PRODUCT
+===================================================== */
 
 function closeProduct() {
 
@@ -879,16 +1137,37 @@ function closeProduct() {
 }
 
 
+/* =====================================================
+   CLOSE WHEN CLICKING OUTSIDE
+===================================================== */
+
 window.onclick = function(event) {
 
     const modal =
         document.getElementById("productModal");
 
     if (event.target === modal) {
+
         closeProduct();
+
     }
 
 };
+
+
+/* =====================================================
+   ESC KEY
+===================================================== */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        closeProduct();
+
+    }
+
+});
 
 </script>
 
