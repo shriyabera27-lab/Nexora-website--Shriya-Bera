@@ -13,11 +13,11 @@
 <!-- NEXORA FAVICON -->
 <link rel="icon"
       type="image/png"
-      href="./Nexorafavicon.png">
+      href="./0e66629a-0dd5-4782-8807-9c8462c2d9bf.png">
 
 <link rel="shortcut icon"
       type="image/png"
-      href="./Nexorafavicon.png">
+      href="./0e66629a-0dd5-4782-8807-9c8462c2d9bf.png">
 
 
 <style>
@@ -907,7 +907,6 @@ footer {
         </div>
 
 
-
         <!-- =====================
              LIPSTICK
         ====================== -->
@@ -939,7 +938,6 @@ footer {
         </div>
 
 
-
         <!-- =====================
              CREAM
         ====================== -->
@@ -969,7 +967,6 @@ footer {
             </button>
 
         </div>
-
 
 
         <!-- =====================
@@ -1467,8 +1464,6 @@ footer {
         <form id="orderForm">
 
 
-            <!-- NAME -->
-
             <input
                 type="text"
                 id="customerName"
@@ -1476,8 +1471,6 @@ footer {
                 required
             >
 
-
-            <!-- PHONE -->
 
             <input
                 type="tel"
@@ -1490,16 +1483,12 @@ footer {
             >
 
 
-            <!-- ADDRESS -->
-
             <textarea
                 id="customerAddress"
                 placeholder="FULL DELIVERY ADDRESS"
                 required
             ></textarea>
 
-
-            <!-- GOOGLE PAY -->
 
             <input
                 type="tel"
@@ -1567,7 +1556,6 @@ footer {
 ========================= */
 
 const products = {
-
 
     lipOil: {
 
@@ -1899,8 +1887,6 @@ document
                 .textContent;
 
 
-            /* PHONE VALIDATION */
-
             if (!/^[0-9]{10}$/.test(phone)) {
 
                 alert(
@@ -1911,8 +1897,6 @@ document
 
             }
 
-
-            /* GOOGLE PAY VALIDATION */
 
             if (!/^[0-9]{10}$/.test(gpay)) {
 
@@ -1925,14 +1909,9 @@ document
             }
 
 
-            /* ORDER ID */
-
             const orderID =
                 generateOrderID();
 
-
-            /* SAVE BASIC ORDER STATUS
-               LOCALLY */
 
             localStorage.setItem(
 
@@ -1960,8 +1939,6 @@ document
 
             );
 
-
-            /* EMAIL */
 
             const subject =
 
@@ -2020,8 +1997,6 @@ document
                 );
 
 
-            /* SHOW CONFIRMATION */
-
             document
                 .getElementById("orderMessage")
                 .innerHTML =
@@ -2043,8 +2018,6 @@ document
                 "Please keep this Order ID " +
                 "for tracking.";
 
-
-            /* OPEN EMAIL */
 
             setTimeout(function() {
 
