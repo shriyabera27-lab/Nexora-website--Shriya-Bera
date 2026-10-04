@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>NEXORA by Shriya Bera</title>
-<link rel="icon" type="image/png" href="Nexorafavicon.png">
-    
+
+<!-- NEXORA FAVICON -->
+<link rel="icon"
+      type="image/png"
+      href="./Nexorafavicon.png">
+
+<link rel="shortcut icon"
+      type="image/png"
+      href="./Nexorafavicon.png">
+
+
 <style>
+
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* =========================
+   PAGE
+========================= */
 
 html {
     scroll-behavior: smooth;
@@ -24,18 +47,26 @@ body {
     color: #202326;
 }
 
-/* NAV */
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 20px 6%;
+
     background: rgba(238,243,246,.95);
+
     backdrop-filter: blur(15px);
+
     border-bottom: 1px solid #d9dfe2;
 }
 
@@ -48,52 +79,81 @@ nav {
 .logo span {
     display: block;
     text-align: center;
+
     font-size: 8px;
     letter-spacing: 3px;
+
     margin-top: 4px;
 }
 
 nav a {
     color: #202326;
+
     text-decoration: none;
+
     margin-left: 28px;
+
     font-size: 12px;
     letter-spacing: 2px;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 85vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     text-align: center;
 }
 
 .hero h1 {
     font-size: clamp(65px, 13vw, 150px);
+
     font-weight: 300;
+
     letter-spacing: 15px;
 }
 
 .hero p {
     margin-top: 20px;
+
     color: #687177;
+
     letter-spacing: 5px;
 }
 
+
+/* =========================
+   BUTTONS
+========================= */
+
 .button {
     display: inline-block;
+
     margin-top: 30px;
+
     padding: 15px 34px;
+
     border: 1px solid #222;
+
     color: #222;
+
     text-decoration: none;
+
     font-size: 11px;
+
     letter-spacing: 3px;
+
     cursor: pointer;
+
     background: transparent;
+
     transition: .3s;
 }
 
@@ -102,7 +162,10 @@ nav a {
     color: white;
 }
 
-/* SECTIONS */
+
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 90px 5%;
@@ -110,58 +173,85 @@ section {
 
 .section-title {
     text-align: center;
+
     font-size: 38px;
+
     font-weight: 300;
+
     letter-spacing: 6px;
 }
 
 .section-subtitle {
     max-width: 800px;
+
     margin: 18px auto 60px;
+
     text-align: center;
+
     color: #687177;
+
     line-height: 1.7;
 }
 
-/* SHOP */
+
+/* =========================
+   SHOP
+========================= */
 
 .shop-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 28px;
 }
 
 .product-card {
     background: #fafbfc;
+
     border: 1px solid #d8dde0;
+
     padding: 26px;
+
     text-align: center;
+
     transition: .3s;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 18px 45px rgba(70,80,90,.12);
+
+    box-shadow:
+        0 18px 45px rgba(70,80,90,.12);
 }
 
 .product-image {
     width: 100%;
+
     aspect-ratio: 1 / 1;
+
     object-fit: cover;
+
     display: block;
+
     cursor: pointer;
 }
 
 .product-name {
     margin-top: 25px;
+
     font-size: 20px;
+
     font-weight: 400;
+
     letter-spacing: 2px;
 }
 
 .price {
     margin-top: 12px;
+
     font-size: 22px;
+
     font-weight: bold;
 }
 
@@ -169,19 +259,35 @@ section {
     margin-top: 23px;
 }
 
+
+/* =========================
+   PAYMENT
+========================= */
+
 .payment {
     max-width: 900px;
+
     margin: 60px auto 0;
+
     padding: 24px;
+
     text-align: center;
+
     border-top: 1px solid #d2d9dd;
+
     border-bottom: 1px solid #d2d9dd;
+
     color: #697278;
+
     font-size: 12px;
+
     letter-spacing: 2px;
 }
 
-/* COLLECTION */
+
+/* =========================
+   COLLECTION
+========================= */
 
 .collection {
     background: #e5edf1;
@@ -189,42 +295,59 @@ section {
 
 .collection-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 28px;
 }
 
 .collection-card {
     padding: 40px 30px;
+
     background: #f8fafb;
+
     text-align: center;
 }
 
 .collection-card h3 {
     margin-bottom: 18px;
+
     font-weight: 400;
+
     letter-spacing: 3px;
 }
 
 .collection-card p {
     color: #687177;
+
     line-height: 1.8;
 }
 
-/* BRAND */
+
+/* =========================
+   BRAND
+========================= */
 
 .brand {
     max-width: 900px;
+
     margin: auto;
+
     text-align: center;
 }
 
 .brand p {
     margin-top: 25px;
+
     color: #657077;
+
     line-height: 1.9;
 }
 
-/* MODELS */
+
+/* =========================
+   MODELS
+========================= */
 
 .models {
     background: #e8eef1;
@@ -232,65 +355,101 @@ section {
 
 .models-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 22px;
 }
 
 .model-photo {
     width: 100%;
+
     aspect-ratio: 3 / 4;
+
     object-fit: cover;
+
     display: block;
 }
 
-/* ABOUT */
+
+/* =========================
+   ABOUT
+========================= */
 
 .about {
     max-width: 850px;
+
     margin: auto;
+
     text-align: center;
 }
 
 .about p {
     margin-top: 28px;
+
     color: #657077;
+
     line-height: 1.9;
 }
 
-/* CONTACT */
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
     text-align: center;
+
     background: #dfe8ed;
 }
 
 .contact p {
     margin-top: 18px;
+
     color: #687177;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     padding: 35px;
+
     text-align: center;
+
     background: #202326;
+
     color: #e1e6e8;
+
     font-size: 10px;
+
     letter-spacing: 3px;
 }
 
-/* PRODUCT POPUP */
+
+/* =========================
+   MODALS
+========================= */
 
 .modal {
     position: fixed;
+
     inset: 0;
+
     z-index: 3000;
+
     display: none;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 20px;
+
     background: rgba(22,27,30,.68);
+
     backdrop-filter: blur(10px);
 }
 
@@ -300,82 +459,259 @@ footer {
 
 .modal-box {
     position: relative;
+
     width: min(600px, 95%);
+
     max-height: 90vh;
+
     overflow-y: auto;
+
     padding: 45px;
+
     background: #f8fafb;
+
     text-align: center;
 }
 
 .close {
     position: absolute;
+
     top: 14px;
+
     right: 22px;
+
     font-size: 29px;
+
     cursor: pointer;
 }
 
 .modal-title {
     font-size: 28px;
+
     font-weight: 400;
+
     letter-spacing: 3px;
 }
 
 .modal-price {
     margin-top: 12px;
+
     font-size: 20px;
+
     font-weight: bold;
 }
 
 .modal-instruction {
     margin: 25px 0 18px;
+
     color: #747d82;
+
     font-size: 12px;
+
     letter-spacing: 2px;
 }
 
+
+/* =========================
+   SHADES
+========================= */
+
 .shades {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 12px;
 }
 
 .shade {
     padding: 17px 12px;
+
     background: white;
+
     border: 1px solid #ccd3d7;
+
     cursor: pointer;
+
     transition: .25s;
 }
 
 .shade:hover,
 .shade.selected {
     background: #25292c;
+
     color: white;
 }
 
 .shade-name {
     font-size: 14px;
+
     letter-spacing: 1px;
 }
 
 .shade-description {
     margin-top: 5px;
+
     font-size: 10px;
+
     opacity: .65;
 }
 
 .selected-shade {
     min-height: 20px;
+
     margin-top: 22px;
+
     color: #626c71;
+
     font-size: 13px;
 }
 
-/* RESPONSIVE */
+
+/* =========================
+   ORDER FORM
+========================= */
+
+#orderForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-top: 25px;
+}
+
+#orderForm input,
+#orderForm textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ccd3d7;
+
+    background: white;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    outline: none;
+}
+
+#orderForm textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+#orderForm input:focus,
+#orderForm textarea:focus {
+    border-color: #222;
+}
+
+#orderForm button {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+.required-note {
+    margin-top: 12px;
+
+    font-size: 10px;
+
+    color: #7a8388;
+
+    letter-spacing: 1px;
+}
+
+.payment-number {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #eef3f6;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+#orderMessage {
+    margin-top: 20px;
+
+    color: #687177;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   TRACK ORDER
+========================= */
+
+.tracking {
+    background: #f8fafb;
+
+    text-align: center;
+}
+
+.tracking-box {
+    max-width: 550px;
+
+    margin: 40px auto 0;
+}
+
+.tracking-box input {
+    width: 100%;
+
+    padding: 16px;
+
+    border: 1px solid #ccd3d7;
+
+    background: white;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+.tracking-status {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border: 1px solid #d5dce0;
+
+    background: #eef3f6;
+
+    line-height: 2;
+}
+
+.status-title {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:1000px) {
+
     .shop-grid {
         grid-template-columns: repeat(2,1fr);
     }
@@ -383,16 +719,21 @@ footer {
     .models-grid {
         grid-template-columns: repeat(2,1fr);
     }
+
 }
 
+
 @media(max-width:750px) {
+
     nav {
         flex-direction: column;
+
         gap: 15px;
     }
 
     nav a {
         margin: 0 7px;
+
         font-size: 9px;
     }
 
@@ -403,9 +744,12 @@ footer {
     .models-grid {
         grid-template-columns: 1fr;
     }
+
 }
 
+
 @media(max-width:550px) {
+
     section {
         padding: 65px 20px;
     }
@@ -425,42 +769,82 @@ footer {
     .modal-box {
         padding: 40px 22px;
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
     <div class="logo">
+
         NEXORA
-        <span>BY SHRIYA BERA</span>
+
+        <span>
+            BY SHRIYA BERA
+        </span>
+
     </div>
 
+
     <div>
-        <a href="#shop">SHOP</a>
-        <a href="#collection">COLLECTION</a>
-        <a href="#models">WORLD</a>
-        <a href="#about">ABOUT</a>
+
+        <a href="#shop">
+            SHOP
+        </a>
+
+        <a href="#collection">
+            COLLECTION
+        </a>
+
+        <a href="#models">
+            WORLD
+        </a>
+
+        <a href="#about">
+            ABOUT
+        </a>
+
+        <a href="#tracking">
+            TRACK
+        </a>
+
     </div>
 
 </nav>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
     <div>
 
-        <h1>NEXORA</h1>
+        <h1>
+            NEXORA
+        </h1>
 
-        <p>BEAUTY, REIMAGINED.</p>
+        <p>
+            BEAUTY, REIMAGINED.
+        </p>
 
-        <a href="#shop" class="button">
+        <a
+            href="#shop"
+            class="button"
+        >
             SHOP NEXORA
         </a>
 
@@ -469,7 +853,10 @@ footer {
 </section>
 
 
-<!-- SHOP -->
+
+<!-- =========================
+     SHOP
+========================= -->
 
 <section id="shop">
 
@@ -478,15 +865,20 @@ footer {
     </h2>
 
     <p class="section-subtitle">
-        Discover the NEXORA collection — thoughtfully imagined
-        for effortless, modern beauty.
+
+        Discover the NEXORA collection —
+        thoughtfully imagined for effortless,
+        modern beauty.
+
     </p>
 
 
     <div class="shop-grid">
 
 
-        <!-- 1ST IMAGE = LIP OIL -->
+        <!-- =====================
+             LIP OIL
+        ====================== -->
 
         <div class="product-card">
 
@@ -505,17 +897,20 @@ footer {
                 $25
             </div>
 
-            <a
+            <button
                 class="button"
-                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Luxe%20Shine%20Lip%20Oil%20Order"
+                onclick="openProduct('lipOil')"
             >
                 ORDER NOW
-            </a>
+            </button>
 
         </div>
 
 
-        <!-- 2ND IMAGE = LIPSTICK -->
+
+        <!-- =====================
+             LIPSTICK
+        ====================== -->
 
         <div class="product-card">
 
@@ -534,17 +929,20 @@ footer {
                 $40
             </div>
 
-            <a
+            <button
                 class="button"
-                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Soft%20Matte%20Lipstick%20Order"
+                onclick="openProduct('lipstick')"
             >
                 ORDER NOW
-            </a>
+            </button>
 
         </div>
 
 
-        <!-- 3RD IMAGE = CREAM -->
+
+        <!-- =====================
+             CREAM
+        ====================== -->
 
         <div class="product-card">
 
@@ -563,17 +961,20 @@ footer {
                 $50
             </div>
 
-            <a
+            <button
                 class="button"
-                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Dew%20Cream%20Order"
+                onclick="openProduct('cream')"
             >
                 ORDER NOW
-            </a>
+            </button>
 
         </div>
 
 
-        <!-- 4TH IMAGE = HIGHLIGHT -->
+
+        <!-- =====================
+             HIGHLIGHT
+        ====================== -->
 
         <div class="product-card">
 
@@ -592,70 +993,112 @@ footer {
                 $30
             </div>
 
-            <a
+            <button
                 class="button"
-                href="mailto:shriyabera27@gmail.com?subject=NEXORA%20Luminous%20Highlight%20Stick%20Order"
+                onclick="openProduct('highlight')"
             >
                 ORDER NOW
-            </a>
+            </button>
 
         </div>
+
 
     </div>
 
 
     <div class="payment">
-        GOOGLE PAY &nbsp; • &nbsp; CASH ON DELIVERY
+
+        GOOGLE PAY &nbsp; • &nbsp;
+        CASH ON DELIVERY
+
     </div>
 
 </section>
 
 
-<!-- COLLECTION -->
 
-<section id="collection" class="collection">
+<!-- =========================
+     COLLECTION
+========================= -->
+
+<section
+    id="collection"
+    class="collection"
+>
 
     <h2 class="section-title">
         THE NEXORA COLLECTION
     </h2>
 
     <p class="section-subtitle">
-        Simple formulas. Sophisticated finishes.
+
+        Simple formulas.
+        Sophisticated finishes.
         Made for everyday beauty.
+
     </p>
+
 
     <div class="collection-grid">
 
+
         <div class="collection-card">
-            <h3>HYDRATE</h3>
+
+            <h3>
+                HYDRATE
+            </h3>
+
             <p>
+
                 Nourishing textures designed to leave
                 lips feeling soft, comfortable and cared for.
+
             </p>
+
         </div>
 
+
         <div class="collection-card">
-            <h3>DEFINE</h3>
+
+            <h3>
+                DEFINE
+            </h3>
+
             <p>
+
                 Modern colour with elegant finishes
                 created for everyday expression.
+
             </p>
+
         </div>
 
+
         <div class="collection-card">
-            <h3>GLOW</h3>
+
+            <h3>
+                GLOW
+            </h3>
+
             <p>
+
                 Soft luminous finishes created to bring
                 effortless dimension to your look.
+
             </p>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- BRAND -->
+
+<!-- =========================
+     BRAND
+========================= -->
 
 <section>
 
@@ -665,16 +1108,22 @@ footer {
             BEAUTY, REIMAGINED.
         </h2>
 
+
         <p>
+
             NEXORA is a modern beauty brand created by
             Shriya Bera, built around effortless beauty,
             thoughtful textures and clean, sophisticated design.
+
         </p>
 
+
         <p>
+
             From nourishing lip care to luminous finishes,
             NEXORA focuses on beauty that feels personal,
             comfortable and effortless.
+
         </p>
 
     </div>
@@ -682,9 +1131,15 @@ footer {
 </section>
 
 
-<!-- MODELLING PHOTOS -->
 
-<section id="models" class="models">
+<!-- =========================
+     MODELLING PHOTOS
+========================= -->
+
+<section
+    id="models"
+    class="models"
+>
 
     <h2 class="section-title">
         NEXORA WORLD
@@ -694,18 +1149,9 @@ footer {
         Beauty in every expression.
     </p>
 
+
     <div class="models-grid">
 
-        <!--
-        PUT YOUR ACTUAL MODELLING PHOTO FILENAMES HERE.
-
-        Example:
-
-        <img src="model1.jpg"
-             class="model-photo"
-             alt="NEXORA model">
-
-        -->
 
         <img
             src="model1.jpg"
@@ -713,11 +1159,13 @@ footer {
             alt="NEXORA model"
         >
 
+
         <img
             src="model2.jpg"
             class="model-photo"
             alt="NEXORA model"
         >
+
 
         <img
             src="model3.jpg"
@@ -725,11 +1173,13 @@ footer {
             alt="NEXORA model"
         >
 
+
         <img
             src="model4.jpg"
             class="model-photo"
             alt="NEXORA model"
         >
+
 
         <img
             src="model5.jpg"
@@ -737,18 +1187,23 @@ footer {
             alt="NEXORA model"
         >
 
+
         <img
             src="model6.jpg"
             class="model-photo"
             alt="NEXORA model"
         >
 
+
     </div>
 
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
@@ -758,17 +1213,23 @@ footer {
             ABOUT NEXORA
         </h2>
 
+
         <p>
+
             NEXORA is a modern beauty brand created by
             Shriya Bera. The brand brings together
             elegant design, comfortable textures and
             effortless beauty for a new generation.
+
         </p>
 
+
         <p>
+
             NEXORA believes beauty does not need to be
             complicated. It should feel natural,
             personal and entirely your own.
+
         </p>
 
     </div>
@@ -776,7 +1237,77 @@ footer {
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- =========================
+     TRACK ORDER
+========================= -->
+
+<section
+    id="tracking"
+    class="tracking"
+>
+
+    <h2 class="section-title">
+        TRACK YOUR ORDER
+    </h2>
+
+    <p class="section-subtitle">
+
+        Enter your NEXORA Order ID to view
+        your current order status.
+
+    </p>
+
+
+    <div class="tracking-box">
+
+        <input
+            type="text"
+            id="trackingID"
+            placeholder="ENTER YOUR ORDER ID"
+        >
+
+        <button
+            class="button"
+            onclick="trackOrder()"
+        >
+            TRACK ORDER
+        </button>
+
+
+        <div
+            id="trackingStatus"
+            class="tracking-status"
+        >
+
+            <div class="status-title">
+                ORDER RECEIVED
+            </div>
+
+            <br>
+
+            Your NEXORA order has been received
+            and is being prepared.
+
+            <br><br>
+
+            <strong>
+                Current Status:
+            </strong>
+
+            ORDER RECEIVED
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="contact">
 
@@ -802,18 +1333,31 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-    NEXORA BY SHRIYA BERA · EST. 2026
+
+    NEXORA BY SHRIYA BERA
+    · EST. 2026
+
 </footer>
 
 
-<!-- PRODUCT SHADE POPUP -->
 
-<div id="productModal" class="modal">
+<!-- =========================
+     PRODUCT SHADE POPUP
+========================= -->
+
+<div
+    id="productModal"
+    class="modal"
+>
 
     <div class="modal-box">
+
 
         <span
             class="close"
@@ -822,130 +1366,348 @@ footer {
             ×
         </span>
 
+
         <h2
             id="modalTitle"
             class="modal-title"
         ></h2>
+
 
         <div
             id="modalPrice"
             class="modal-price"
         ></div>
 
+
         <div class="modal-instruction">
+
             SELECT YOUR SHADE
+
         </div>
+
 
         <div
             id="shadeContainer"
             class="shades"
         ></div>
 
+
         <div
             id="selectedShade"
             class="selected-shade"
         >
+
             Select a shade
+
         </div>
 
-        <a
+
+        <button
             id="modalOrder"
             class="button"
-            href="#"
+            type="button"
+            onclick="openOrderForm()"
         >
+
             ORDER SELECTED SHADE
-        </a>
+
+        </button>
+
+
+        <div class="required-note">
+
+            A shade must be selected before ordering.
+
+        </div>
+
 
     </div>
 
 </div>
 
 
+
+<!-- =========================
+     CUSTOMER ORDER FORM
+========================= -->
+
+<div
+    id="orderFormModal"
+    class="modal"
+>
+
+    <div class="modal-box">
+
+
+        <span
+            class="close"
+            onclick="closeOrderForm()"
+        >
+            ×
+        </span>
+
+
+        <h2 class="modal-title">
+
+            COMPLETE YOUR ORDER
+
+        </h2>
+
+
+        <div class="modal-instruction">
+
+            ALL DETAILS ARE REQUIRED
+
+        </div>
+
+
+        <p id="orderProductInfo"></p>
+
+
+        <form id="orderForm">
+
+
+            <!-- NAME -->
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="FULL NAME"
+                required
+            >
+
+
+            <!-- PHONE -->
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="PHONE NUMBER"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                inputmode="numeric"
+                required
+            >
+
+
+            <!-- ADDRESS -->
+
+            <textarea
+                id="customerAddress"
+                placeholder="FULL DELIVERY ADDRESS"
+                required
+            ></textarea>
+
+
+            <!-- GOOGLE PAY -->
+
+            <input
+                type="tel"
+                id="gpayNumber"
+                placeholder="GOOGLE PAY NUMBER"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                inputmode="numeric"
+                required
+            >
+
+
+            <div class="payment-number">
+
+                GOOGLE PAY NUMBER
+
+                <br><br>
+
+                <strong>
+                    +91 9819762876
+                </strong>
+
+            </div>
+
+
+            <p class="required-note">
+
+                Your phone number and delivery address
+                are required for order processing and delivery.
+
+            </p>
+
+
+            <button
+                type="submit"
+                class="button"
+            >
+
+                CONFIRM ORDER
+
+            </button>
+
+
+        </form>
+
+
+        <div id="orderMessage"></div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
+
+
+/* =========================
+   PRODUCTS
+========================= */
 
 const products = {
 
+
     lipOil: {
+
         title: "LUXE SHINE LIP OIL",
+
         price: "$25",
+
         shades: [
+
             ["Unbutton", "Skin colour"],
+
             ["Rosewood", "Light burgundy"],
+
             ["Glass Slipper", "Transparent"],
+
             ["Loveletter", "Pink"]
+
         ]
+
     },
+
 
     lipstick: {
+
         title: "SOFT MATTE LIPSTICK",
+
         price: "$40",
+
         shades: [
+
             ["Rambling Rose", "Dark pink"],
+
             ["Naughty Nude", "Light bronze"],
+
             ["Darling Dahlia", "Pink"],
+
             ["Magical Mauve", "Mauve"]
+
         ]
+
     },
+
 
     cream: {
+
         title: "DEW CREAM",
+
         price: "$50",
+
         shades: [
+
             ["White", "White"]
+
         ]
+
     },
 
+
     highlight: {
+
         title: "LUMINOUS HIGHLIGHT STICK",
+
         price: "$30",
+
         shades: [
+
             ["Bronze Lights", "Bronze"],
+
             ["Beige Lights", "Beige"],
+
             ["Pink Lights", "Pink"],
+
             ["Lavender Lights", "Lavender"]
+
         ]
+
     }
 
 };
 
 
+
+/* =========================
+   CURRENT PRODUCT
+========================= */
+
+let currentProductKey = "";
+
+
+
+/* =========================
+   OPEN PRODUCT
+========================= */
+
 function openProduct(productKey) {
 
     const product = products[productKey];
+
+    currentProductKey = productKey;
+
 
     document
         .getElementById("productModal")
         .classList.add("active");
 
+
     document
         .getElementById("modalTitle")
         .textContent = product.title;
+
 
     document
         .getElementById("modalPrice")
         .textContent = product.price;
 
+
     document
         .getElementById("selectedShade")
         .textContent = "Select a shade";
 
-    document
-        .getElementById("modalOrder")
-        .href = "#";
 
     const container =
         document.getElementById("shadeContainer");
 
+
     container.innerHTML = "";
 
+
     product.shades.forEach(function(shade) {
+
 
         const button =
             document.createElement("div");
 
+
         button.className = "shade";
 
+
         button.innerHTML = `
+
             <div class="shade-name">
                 ${shade[0]}
             </div>
@@ -953,39 +1715,32 @@ function openProduct(productKey) {
             <div class="shade-description">
                 ${shade[1]}
             </div>
+
         `;
 
+
         button.onclick = function() {
+
 
             document
                 .querySelectorAll(".shade")
                 .forEach(function(item) {
+
                     item.classList.remove("selected");
+
                 });
 
+
             button.classList.add("selected");
+
 
             document
                 .getElementById("selectedShade")
                 .textContent =
                 "Selected: " + shade[0];
 
-            const subject =
-                encodeURIComponent(
-                    "NEXORA " +
-                    product.title +
-                    " — " +
-                    shade[0] +
-                    " Order"
-                );
-
-            document
-                .getElementById("modalOrder")
-                .href =
-                "mailto:shriyabera27@gmail.com?subject="
-                + subject;
-
         };
+
 
         container.appendChild(button);
 
@@ -993,6 +1748,11 @@ function openProduct(productKey) {
 
 }
 
+
+
+/* =========================
+   CLOSE PRODUCT
+========================= */
 
 function closeProduct() {
 
@@ -1003,27 +1763,498 @@ function closeProduct() {
 }
 
 
-window.onclick = function(event) {
 
-    const modal =
-        document.getElementById("productModal");
+/* =========================
+   OPEN ORDER FORM
+========================= */
 
-    if (event.target === modal) {
-        closeProduct();
+function openOrderForm() {
+
+
+    const selectedShade =
+        document
+        .getElementById("selectedShade")
+        .textContent;
+
+
+    if (
+        selectedShade === "Select a shade"
+    ) {
+
+        alert(
+            "Please select a shade before ordering."
+        );
+
+        return;
+
     }
 
-};
+
+    const product =
+        products[currentProductKey];
 
 
-document.addEventListener("keydown", function(event) {
+    document
+        .getElementById("orderProductInfo")
+        .innerHTML =
 
-    if (event.key === "Escape") {
-        closeProduct();
+        "<strong>" +
+        product.title +
+        "</strong><br>" +
+
+        selectedShade;
+
+
+    document
+        .getElementById("orderFormModal")
+        .classList.add("active");
+
+}
+
+
+
+/* =========================
+   CLOSE ORDER FORM
+========================= */
+
+function closeOrderForm() {
+
+    document
+        .getElementById("orderFormModal")
+        .classList.remove("active");
+
+}
+
+
+
+/* =========================
+   GENERATE ORDER ID
+========================= */
+
+function generateOrderID() {
+
+    return (
+
+        "NEX-" +
+
+        Date.now()
+            .toString()
+            .slice(-8)
+
+    );
+
+}
+
+
+
+/* =========================
+   SUBMIT ORDER
+========================= */
+
+document
+    .getElementById("orderForm")
+    .addEventListener(
+        "submit",
+        function(event) {
+
+
+            event.preventDefault();
+
+
+            const name =
+                document
+                .getElementById("customerName")
+                .value
+                .trim();
+
+
+            const phone =
+                document
+                .getElementById("customerPhone")
+                .value
+                .trim();
+
+
+            const address =
+                document
+                .getElementById("customerAddress")
+                .value
+                .trim();
+
+
+            const gpay =
+                document
+                .getElementById("gpayNumber")
+                .value
+                .trim();
+
+
+            const product =
+                products[currentProductKey];
+
+
+            const shade =
+                document
+                .getElementById("selectedShade")
+                .textContent;
+
+
+            /* PHONE VALIDATION */
+
+            if (!/^[0-9]{10}$/.test(phone)) {
+
+                alert(
+                    "Please enter a valid 10-digit phone number."
+                );
+
+                return;
+
+            }
+
+
+            /* GOOGLE PAY VALIDATION */
+
+            if (!/^[0-9]{10}$/.test(gpay)) {
+
+                alert(
+                    "Please enter a valid 10-digit Google Pay number."
+                );
+
+                return;
+
+            }
+
+
+            /* ORDER ID */
+
+            const orderID =
+                generateOrderID();
+
+
+            /* SAVE BASIC ORDER STATUS
+               LOCALLY */
+
+            localStorage.setItem(
+
+                "nexoraOrder_" + orderID,
+
+                JSON.stringify({
+
+                    orderID: orderID,
+
+                    name: name,
+
+                    phone: phone,
+
+                    address: address,
+
+                    gpay: gpay,
+
+                    product: product.title,
+
+                    shade: shade,
+
+                    status: "ORDER RECEIVED"
+
+                })
+
+            );
+
+
+            /* EMAIL */
+
+            const subject =
+
+                encodeURIComponent(
+
+                    "NEXORA ORDER " +
+                    orderID
+
+                );
+
+
+            const body =
+
+                encodeURIComponent(
+
+                    "NEXORA ORDER\n\n" +
+
+                    "ORDER ID: " +
+                    orderID +
+
+                    "\n\n" +
+
+                    "PRODUCT: " +
+                    product.title +
+
+                    "\n" +
+
+                    "SHADE: " +
+                    shade +
+
+                    "\n\n" +
+
+                    "CUSTOMER NAME: " +
+                    name +
+
+                    "\n" +
+
+                    "PHONE NUMBER: " +
+                    phone +
+
+                    "\n\n" +
+
+                    "DELIVERY ADDRESS:\n" +
+                    address +
+
+                    "\n\n" +
+
+                    "GOOGLE PAY NUMBER: " +
+                    gpay +
+
+                    "\n\n" +
+
+                    "PAYMENT NUMBER: " +
+                    "+91 9819762876"
+
+                );
+
+
+            /* SHOW CONFIRMATION */
+
+            document
+                .getElementById("orderMessage")
+                .innerHTML =
+
+                "<strong>ORDER RECEIVED</strong>" +
+
+                "<br><br>" +
+
+                "Your NEXORA Order ID is:" +
+
+                "<br><br>" +
+
+                "<strong>" +
+                orderID +
+                "</strong>" +
+
+                "<br><br>" +
+
+                "Please keep this Order ID " +
+                "for tracking.";
+
+
+            /* OPEN EMAIL */
+
+            setTimeout(function() {
+
+                window.location.href =
+
+                    "mailto:shriyabera27@gmail.com" +
+
+                    "?subject=" +
+
+                    subject +
+
+                    "&body=" +
+
+                    body;
+
+            }, 500);
+
+
+        }
+    );
+
+
+
+/* =========================
+   TRACK ORDER
+========================= */
+
+function trackOrder() {
+
+
+    const trackingID =
+
+        document
+        .getElementById("trackingID")
+        .value
+        .trim();
+
+
+    if (!trackingID) {
+
+        alert(
+            "Please enter your NEXORA Order ID."
+        );
+
+        return;
+
     }
 
-});
+
+    const savedOrder =
+
+        localStorage.getItem(
+            "nexoraOrder_" + trackingID
+        );
+
+
+    const statusBox =
+
+        document
+        .getElementById("trackingStatus");
+
+
+    if (savedOrder) {
+
+
+        const order =
+            JSON.parse(savedOrder);
+
+
+        statusBox.innerHTML = `
+
+            <div class="status-title">
+                ${order.status}
+            </div>
+
+            <br>
+
+            <strong>
+                Order ID:
+            </strong>
+
+            ${order.orderID}
+
+            <br>
+
+            <strong>
+                Product:
+            </strong>
+
+            ${order.product}
+
+            <br>
+
+            <strong>
+                Shade:
+            </strong>
+
+            ${order.shade}
+
+            <br><br>
+
+            <strong>
+                Current Status:
+            </strong>
+
+            ${order.status}
+
+        `;
+
+
+        statusBox.style.display =
+            "block";
+
+
+    } else {
+
+
+        statusBox.innerHTML = `
+
+            <div class="status-title">
+                ORDER NOT FOUND
+            </div>
+
+            <br>
+
+            Please check your Order ID
+            and try again.
+
+        `;
+
+
+        statusBox.style.display =
+            "block";
+
+    }
+
+}
+
+
+
+/* =========================
+   CLOSE MODALS WHEN
+   CLICKING OUTSIDE
+========================= */
+
+window.onclick =
+    function(event) {
+
+
+        const productModal =
+            document.getElementById(
+                "productModal"
+            );
+
+
+        const orderModal =
+            document.getElementById(
+                "orderFormModal"
+            );
+
+
+        if (
+            event.target === productModal
+        ) {
+
+            closeProduct();
+
+        }
+
+
+        if (
+            event.target === orderModal
+        ) {
+
+            closeOrderForm();
+
+        }
+
+    };
+
+
+
+/* =========================
+   ESCAPE KEY
+========================= */
+
+document.addEventListener(
+
+    "keydown",
+
+    function(event) {
+
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeProduct();
+
+            closeOrderForm();
+
+        }
+
+    }
+
+);
 
 </script>
 
+
 </body>
+
 </html>
